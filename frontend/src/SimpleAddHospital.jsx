@@ -7,6 +7,7 @@ import {
   XMarkIcon
 } from '@heroicons/react/24/outline';
 import { isAdmin, isAuthenticated } from './utils/auth';
+import { API_ENDPOINTS } from './config/api';
 
 const SimpleAddHospital = () => {
   const navigate = useNavigate();
@@ -123,7 +124,7 @@ const SimpleAddHospital = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/api/hospitals/register', {
+      const response = await fetch(API_ENDPOINTS.HOSPITALS.REGISTER, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

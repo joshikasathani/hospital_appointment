@@ -8,6 +8,7 @@ import {
   EyeSlashIcon,
   UserIcon
 } from '@heroicons/react/24/outline';
+import { API_ENDPOINTS } from './config/api';
 
 const SimpleLogin = () => {
   const navigate = useNavigate();
@@ -41,7 +42,7 @@ const SimpleLogin = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/api/auth/login', {
+      const response = await fetch(API_ENDPOINTS.AUTH.LOGIN, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

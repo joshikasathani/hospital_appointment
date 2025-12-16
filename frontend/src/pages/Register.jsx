@@ -10,6 +10,7 @@ import {
   UserGroupIcon,
   CheckCircleIcon
 } from '@heroicons/react/24/outline';
+import { API_ENDPOINTS } from '../config/api';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -55,7 +56,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/api/auth/register', {
+      const response = await fetch(API_ENDPOINTS.AUTH.REGISTER, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

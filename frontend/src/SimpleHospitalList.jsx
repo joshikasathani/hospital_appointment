@@ -10,6 +10,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { StarIcon as StarIconSolid } from '@heroicons/react/24/solid';
 import { isAdmin, isAuthenticated } from './utils/auth';
+import { API_ENDPOINTS } from './config/api';
 
 const SimpleHospitalList = () => {
   const [searchTerm, setSearchTerm] = useState('');
